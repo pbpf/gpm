@@ -19,7 +19,7 @@
 % Illinois at Urbana-Champaign
 % Link: https://github.com/danielrherber/basic-multiple-interval-pseudospectral
 %--------------------------------------------------------------------------
-function tau = LGL_nodes(N)
+function tau = LGL_nodes(N) 
     % See Page 99 of the book: J. Shen, T. Tang and L. Wang, Spectral Methods:
     % Algorithms, Analysis and Applications, Springer Series in Computational
     % Mathematics, 41, Springer, 2011. 

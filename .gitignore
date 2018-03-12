@@ -1,3 +1,5 @@
 #matlab auto gen file
 *.asv
+#matlab realtime script
+*.mlx
 #some local files

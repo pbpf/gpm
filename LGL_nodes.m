@@ -38,7 +38,7 @@ function tau = LGL_nodes(N)
  
     while max(abs(ze1-ze))>=ep            % Newton's iteration procedure
       ze1 = ze;
-      [dy,y] = lepoly(N,ze);
+      [dy,y] = lepoly_dy(N,ze);
       ze = ze-(1-ze.*ze).*dy./(2*ze.*dy-N*(N+1)*y);  % see Page 99 of the book
     end                                  % around 6 iterations are required for n=100
 

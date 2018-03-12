@@ -11,3 +11,4 @@
 
 -- LGL_Dmatrix.m    计算Lagrange-Gauss-Lobatto点的一阶微分矩阵
 
+-- example.m        案例：gpm求解二阶系统

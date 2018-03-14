@@ -2,4 +2,6 @@
 *.asv
 #matlab realtime script
 *.mlx
+.vscode
+公式.md
 #some local files

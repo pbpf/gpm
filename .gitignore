@@ -1,5 +1,6 @@
 #matlab auto gen file
 *.asv
+*.pdf
 #matlab realtime script
 *.mlx
 .vscode

@@ -1,15 +1,39 @@
 # gpm
-±¾ÏîÄ¿ÊÔÍ¼½¨Á¢¸ßË¹Î±Æ×·¨µÄmatlab»ù±¾´úÂë£¬²¢Ìá¹©³éÏó²ãÒÔ¹©ÍØÕ¹¡£
+ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½Í¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë¹Î±ï¿½×·ï¿½ï¿½ï¿½matlabï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë£¬ï¿½ï¿½ï¿½á¹©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¹ï¿½ï¿½ï¿½Õ¹ï¿½ï¿½
 
--- leploy.m         ¼ÆËãLegendre¶àÏîÊ½
+-- leploy.m         ï¿½ï¿½ï¿½ï¿½Legendreï¿½ï¿½ï¿½ï¿½Ê½
 
--- leploy_dy.m      ¼ÆËãLegendre¶àÏîÊ½¼°Æäµ¼Êý
+-- leploy_dy.m      ï¿½ï¿½ï¿½ï¿½Legendreï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½äµ¼ï¿½ï¿½
 
--- LGL_nodes.m      ¼ÆËãLagrange-Gauss-Lobattoµã
+-- LGL_nodes.m      ï¿½ï¿½ï¿½ï¿½Lagrange-Gauss-Lobattoï¿½ï¿½
 
--- LGL_weight.m     ¼ÆËãLagrange-Gauss-LobattoµãµÄ¼ÓÈ¨
+-- LGL_weight.m     ï¿½ï¿½ï¿½ï¿½Lagrange-Gauss-Lobattoï¿½ï¿½Ä¼ï¿½È¨
 
--- LGL_Dmatrix.m    ¼ÆËãLagrange-Gauss-LobattoµãµÄÒ»½×Î¢·Ö¾ØÕó
+-- LGL_Dmatrix.m    ï¿½ï¿½ï¿½ï¿½Lagrange-Gauss-Lobattoï¿½ï¿½ï¿½Ò»ï¿½ï¿½Î¢ï¿½Ö¾ï¿½ï¿½ï¿½
 
--- example.m        °¸Àý£ºgpmÇó½â¶þ½×ÏµÍ³
--- example2.m        °¸Àý£ºgpmÇó½âÒ»½×Î¢·Ö·½³Ì×é
+-- example.m        ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½gpmï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÏµÍ³
+-- example2.m        ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½gpmï¿½ï¿½ï¿½Ò»ï¿½ï¿½Î¢ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½
+
+```flow
+st=>start: start
+op1=>operation: ç»™å‡ºYçš„åˆå€¼Y_0|past
+op=>operation: ç»™å‡ºYçš„æ›´æ–°Y_k|current
+sub1=>subroutine: æž„é€ qpå­é—®é¢˜æ±‚è§£
+op3=>operation: åœ¨Y_Kå‡ºæ³°å‹’å±•å¼€åˆ°äºŒé˜¶é¡¹
+op4=>operation: è§£äºŒæ¬¡è§„åˆ’
+cond=>condition: æ˜¯å¦è¶³å¤Ÿç²¾ç¡®ï¼Ÿ
+e=>end
+
+st->op1->op->cond
+cond(yes)->e
+cond(no)->sub1->op
+```
+æž„é€ qpå­é—®é¢˜æ±‚è§£:
+```flow
+st=>start: start
+op3=>operation: åœ¨Y_Kå‡ºæ³°å‹’å±•å¼€åˆ°äºŒé˜¶é¡¹,å¾—åˆ°äºŒæ¬¡è§„åˆ’é—®é¢˜
+op4=>operation: ä½¿ç”¨quadprogæ±‚è§£
+e=>end
+
+st->op3->op4->e
+```
